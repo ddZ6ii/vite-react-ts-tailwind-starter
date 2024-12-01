@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------ CSS variables ------------ *\
+
+/* Use CSS variables to dynamically change colors throughout the applications when switching theme.
+
+/* These variables are referenced from Tailwind config. file to create custom and re-usable color names via Tailwind classes.
+
+/* Here only `channel values` are defined (the color itself is derived from these values in the Tailwind config. file) to allow changing the opacity directly from classnames using Tailwind notation such as: `shadow-accent-500/20`.
+
+(https://www.youtube.com/watch?v=vIBKSmWAdIA) 
+
+*/
+:root {
+  --primary: 241 245 249;
+  --secondary: 30 41 59;
+
+  --accent-50: 238 242 255;
+  --accent-500: 99 102 241;
+  --accent-600: 79 70 229;
+}
+
+body {
+  background-color: rgba(var(--primary));
+  color: rgba(var(--secondary));
+}
+
+.dark {
+  --primary: 30 41 59;
+  --secondary: 241 245 249;
+  background-color: rgba(var(--primary));
+  color: rgba(var(--secondary));
+}
